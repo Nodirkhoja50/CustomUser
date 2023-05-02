@@ -29,6 +29,9 @@ class UserAdminConfig(UserAdmin):
                 form.cleaned_data['password1'],
                 form.cleaned_data['user_name'],
             )
+
+
+            
         return super().save_form(request, form, change)
 admin.site.register(NewUsers,UserAdminConfig)
 
